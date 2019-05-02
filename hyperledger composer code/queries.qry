@@ -1,0 +1,16 @@
+/**
+ * New query file
+ */
+query Q1{
+  description: "View all apartments."
+  statement:
+  SELECT org.example.mynetwork.Apartment
+}
+
+query Q2{
+  description: "View all apartments having rent less than $500."
+  statement:
+  SELECT org.example.mynetwork.Apartment
+  WHERE (rentPerMonth<500)
+  ORDER BY [rentPerMonth]
+}
